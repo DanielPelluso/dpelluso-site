@@ -5,13 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Controle Pro — Gestão comercial</title>
   <meta name="description" content="Controle Pro: gestão comercial para pequenos negócios — vendas, produtos, estoque, financeiro e relatórios. Baixe o instalador para Windows.">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
   <style>
     :root { --navy: #00235D; --text: #1a1a1a; --muted: #555; --bg: #fafafa; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-    header { background: var(--navy); color: #fff; padding: 32px 20px; text-align: center; }
-    header h1 { font-size: 1.6rem; margin-bottom: 8px; }
-    header p { opacity: .85; font-size: .95rem; }
+    header { background: #000; color: #fff; padding: 24px 20px; text-align: center; }
+    header .brand-row { display: flex; align-items: center; justify-content: center; gap: 14px; }
+    header .brand-row img { width: 56px; height: 56px; }
+    header h1 { font-size: 1.6rem; }
+    header p { opacity: .85; font-size: .95rem; margin-top: 8px; }
     main { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
     .card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 1px 4px rgba(0,0,0,.08); text-align: center; }
     h2 { color: var(--navy); margin-bottom: 12px; font-size: 1.3rem; }
@@ -28,7 +31,10 @@
 </head>
 <body>
   <header>
-    <h1>Controle Pro</h1>
+    <div class="brand-row">
+      <img src="/assets/favicon.png" alt="">
+      <h1>Controle Pro</h1>
+    </div>
     <p>Gestão comercial para pequenos negócios</p>
   </header>
 
