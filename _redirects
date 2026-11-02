@@ -1,0 +1,20 @@
+# Redirecionamentos do Cloudflare Pages
+# Formato: <source> <destination> <code|200 rewrite>
+
+# SPA fallback — Flutter web futuro em /futrank (rotas internas caem no index do app).
+# As páginas estáticas de política/termos existem como arquivo e têm precedência
+# sobre wildcard no Cloudflare Pages; mantemos regras explícitas de segurança.
+/futrank/politica-de-privacidade /futrank/politica-de-privacidade/index.html 200
+/futrank/politica-de-privacidade/ /futrank/politica-de-privacidade/index.html 200
+/futrank/termo-de-uso /futrank/termo-de-uso/index.html 200
+/futrank/termo-de-uso/ /futrank/termo-de-uso/index.html 200
+/futrank/* /futrank/index.html 200
+
+# SPA fallback — Controle Pro web futuro em /controlepro.
+/controlepro/politica-de-privacidade /controlepro/politica-de-privacidade/index.html 200
+/controlepro/politica-de-privacidade/ /controlepro/politica-de-privacidade/index.html 200
+/controlepro/termo-de-uso /controlepro/termo-de-uso/index.html 200
+/controlepro/termo-de-uso/ /controlepro/termo-de-uso/index.html 200
+/controlepro/* /controlepro/index.html 200
+
+# Alias legados (URLs curtas antigas do github.io não se aplicam aqui; sem outro alias).
