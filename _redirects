@@ -1,3 +1,8 @@
 # Redirecionamentos do Cloudflare Pages (formato Netlify)
 # Regras wildcard SPA são adicionar quando o Flutter web for publicado;
-# hoje os index.html estáticos já atendem /futrank e /controlepro.
+# hoje os index.html estáticos já atendem /timerank e /controlepro.
+
+# Legado FutRank → TimeRank (301 permanente; prefixos diferentes, sem loop).
+/futrank /timerank 301
+/futrank/ /timerank/ 301
+/futrank/* /timerank/:splat 301

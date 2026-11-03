@@ -6,14 +6,14 @@ Memória técnica permanente do site **dpelluso.com.br**. Leia este arquivo ante
 
 ## 1. Objetivo
 
-Site institucional da **DPelluso** (página raiz), com seções dos apps **Controle Pro** e **FutRank**, hospedagem das **políticas LGPD** (4 URLs oficiais) e **download do setup** do Controle Pro. Futuras versões web dos apps (Flutter web) vão para `/futrank` e `/controlepro`.
+Site institucional da **DPelluso** (página raiz), com seções dos apps **Controle Pro** e **TimeRank**, hospedagem das **políticas LGPD** (4 URLs oficiais) e **download do setup** do Controle Pro. Futuras versões web dos apps (Flutter web) vão para `/timerank` e `/controlepro`.
 
 **URLs oficiais (usar sempre estas — sem `.html`, com barra no final servida pelo Pages):**
 
 | Página | URL |
 |---|---|
-| Política FutRank | `https://dpelluso.com.br/futrank/politica-de-privacidade` |
-| Termos FutRank | `https://dpelluso.com.br/futrank/termo-de-uso` |
+| Política TimeRank | `https://dpelluso.com.br/timerank/politica-de-privacidade` |
+| Termos TimeRank | `https://dpelluso.com.br/timerank/termo-de-uso` |
 | Política Controle Pro | `https://dpelluso.com.br/controlepro/politica-de-privacidade` |
 | Termos Controle Pro | `https://dpelluso.com.br/controlepro/termo-de-uso` |
 | Setup Controle Pro | `https://dpelluso.com.br/downloads/ControlePro-Setup-1.0.0.exe` |
@@ -22,18 +22,18 @@ Site institucional da **DPelluso** (página raiz), com seções dos apps **Contr
 
 - **Hospedagem:** Cloudflare Pages, projeto `dpelluso-site`, production branch `main`, deploy via `npx wrangler pages deploy .` (env User `CLOUDFLARE_API_TOKEN` — **nunca commitar**).
 - **Domínio:** apex `dpelluso.com.br` (zona Cloudflare); `www` → apex (Redirect Rule 301).
-- **DNS/Email Routing:** zona Cloudflare de `dpelluso.com.br` (o mesmo projeto que recebe os e-mails de `futrank@`/`controlepro@`).
+- **DNS/Email Routing:** zona Cloudflare de `dpelluso.com.br` (o mesmo projeto que recebe os e-mails de `timerank@`/`controlepro@`).
 - **Repo GitHub:** `DanielPelluso/dpelluso-site` (público).
 - **Estilo:** HTML estático puro (sem build), visual consistente com as políticas — navy `#00235D`, fonte system-ui.
-- **`_redirects`:** regras explícitas para as 4 páginas de política + wildcard SPA (`/futrank/*`, `/controlepro/*` → index do seção) para o Flutter web futuro. Se as políticas passarem a ser engolidas pelo wildcard, testar ordem/precedência no Pages.
+- **`_redirects`:** regras explícitas para as 4 páginas de política + wildcard SPA (`/timerank/*`, `/controlepro/*` → index do seção) para o Flutter web futuro. Se as políticas passarem a ser engolidas pelo wildcard, testar ordem/precedência no Pages.
 
 ## 3. Pendências
 
-- [ ] **AdMob:** usuário precisa atualizar a URL da política de privacidade dos 2 apps (Controle Pro e FutRank) para as URLs novas acima. Até lá, `github.io/politicas-apps` continua no ar **de propósito** — **não remover/redirecionar** o repo `politicas-apps` sem combinar.
+- [ ] **AdMob:** usuário precisa atualizar a URL da política de privacidade dos 2 apps (Controle Pro e TimeRank) para as URLs novas acima. Até lá, `github.io/politicas-apps` continua no ar **de propósito** — **não remover/redirecionar** o repo `politicas-apps` sem combinar.
 - [ ] **Play Store:** idem, campo de política de privacidade nos listings.
-- [ ] **Flutter web** em `/futrank` e `/controlepro` (próxima fase; build com `base href` da seção).
+- [ ] **Flutter web** em `/timerank` e `/controlepro` (próxima fase; build com `base href` da seção).
 - [ ] **Logo DPelluso** na página institucional (usuário vai criar; hoje é placeholder textual).
-- [ ] Atualizar seed `app_config.privacy_policy_url` do FutRank e `AboutLinks` para as URLs novas (pode estar feito — conferir antes de mexer).
+- [ ] Atualizar seed `app_config.privacy_policy_url` do TimeRank e `AboutLinks` para as URLs novas (pode estar feito — conferir antes de mexer).
 
 ## 4. Regras
 
@@ -55,4 +55,4 @@ npx wrangler pages project list
 
 ## 6. Histórico de decisões
 
-- **2026-11-02:**-site nasce em Cloudflare Pages (não Google Sites — este não hospeda Flutter web em subpaths). Repo novo `dpelluso-site`. Políticas migradas do `politicas-apps` (GitHub Pages); termo de uso do FutRank **criado** (não existia). Setup (18,7 MB) hospedado no próprio Pages (limite 25 MiB). `github.io` mantido vivo até atualizar AdMob/Play.
+- **2026-11-02:**-site nasce em Cloudflare Pages (não Google Sites — este não hospeda Flutter web em subpaths). Repo novo `dpelluso-site`. Políticas migradas do `politicas-apps` (GitHub Pages); termo de uso do TimeRank **criado** (não existia). Setup (18,7 MB) hospedado no próprio Pages (limite 25 MiB). `github.io` mantido vivo até atualizar AdMob/Play.
