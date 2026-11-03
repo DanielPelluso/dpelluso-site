@@ -25,7 +25,7 @@ Site institucional da **DPelluso** (página raiz), com seções dos apps **Contr
 - **DNS/Email Routing:** zona Cloudflare de `dpelluso.com.br` (o mesmo projeto que recebe os e-mails de `timerank@`/`controlepro@`).
 - **Repo GitHub:** `DanielPelluso/dpelluso-site` (público).
 - **Estilo:** HTML estático puro (sem build), visual consistente com as políticas — navy `#00235D`, fonte system-ui.
-- **`_redirects`:** regras explícitas para as 4 páginas de política + wildcard SPA (`/timerank/*`, `/controlepro/*` → index do seção) para o Flutter web futuro. Se as políticas passarem a ser engolidas pelo wildcard, testar ordem/precedência no Pages.
+- **`_redirects`:** hoje só os **301 legados** `/futrank` → `/timerank` (prefixos diferentes, sem loop). Wildcards SPA virão com o Flutter web futuro; as 4 políticas são arquivos estáticos com precedência natural.
 
 ## 3. Pendências
 
@@ -33,7 +33,7 @@ Site institucional da **DPelluso** (página raiz), com seções dos apps **Contr
 - [ ] **Play Store:** idem, campo de política de privacidade nos listings.
 - [ ] **Flutter web** em `/timerank` e `/controlepro` (próxima fase; build com `base href` da seção).
 - [ ] **Logo DPelluso** na página institucional (usuário vai criar; hoje é placeholder textual).
-- [ ] Atualizar seed `app_config.privacy_policy_url` do TimeRank e `AboutLinks` para as URLs novas (pode estar feito — conferir antes de mexer).
+- [x] ~~Atualizar seed `app_config.privacy_policy_url` do TimeRank e `AboutLinks` para as URLs novas.~~ **FEITO (03/11/2026):** migration `20261103000001` aplicada no banco + `AboutLinks` = `dpelluso.com.br/timerank/...`.
 
 ## 4. Regras
 
@@ -56,3 +56,4 @@ npx wrangler pages project list
 ## 6. Histórico de decisões
 
 - **2026-11-02:**-site nasce em Cloudflare Pages (não Google Sites — este não hospeda Flutter web em subpaths). Repo novo `dpelluso-site`. Políticas migradas do `politicas-apps` (GitHub Pages); termo de uso do TimeRank **criado** (não existia). Setup (18,7 MB) hospedado no próprio Pages (limite 25 MiB). `github.io` mantido vivo até atualizar AdMob/Play.
+- **2026-11-03:** rename FutRank → TimeRank no site inteiro (textos, e-mails `timerank@`, pasta `futrank/` → `timerank/`) + 301 `/futrank/*` → `/timerank/*` em `_redirects` (commit `8c46b83`, deployado e validado: 3 URLs novas 200, 3 antigas 301).
