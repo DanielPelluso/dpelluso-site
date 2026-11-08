@@ -1,55 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/timerank/">
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TimeRank — Versão web</title>
-  <meta name="description" content="TimeRank: organize peladas e partidas de futebol entre amigos. Versão web em breve.">
-  <link rel="icon" type="image/png" href="/assets/favicon.png">
-  <style>
-    :root { --navy: #00235D; --text: #1a1a1a; --muted: #555; --bg: #fafafa; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-    header { background: #000; color: #fff; padding: 24px 20px; text-align: center; }
-    header .brand-row { display: flex; align-items: center; justify-content: center; gap: 14px; }
-    header .brand-row img { width: 56px; height: 56px; }
-    header h1 { font-size: 1.6rem; }
-    header p { opacity: .85; font-size: .95rem; margin-top: 8px; }
-    main { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; text-align: center; }
-    .card { background: #fff; border-radius: 12px; padding: 32px 24px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
-    h2 { color: var(--navy); margin-bottom: 12px; font-size: 1.3rem; }
-    p { margin-bottom: 12px; }
-    a { color: var(--navy); }
-    .links { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-    .links a { font-size: .9rem; }
-    footer { text-align: center; padding: 24px; color: var(--muted); font-size: .85rem; }
-    footer a { margin: 0 6px; }
-    @media (max-width: 480px) { header h1 { font-size: 1.3rem; } main { padding: 20px 14px 48px; } }
-  </style>
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Organize suas peladas com os amigos.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="TimeRank">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>TimeRank</title>
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <header>
-    <div class="brand-row">
-      <img src="/assets/favicon.png" alt="">
-      <h1>TimeRank</h1>
-    </div>
-    <p>Peladas, partidas, times e ranking entre amigos</p>
-  </header>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
 
-  <main>
-    <div class="card">
-      <h2>Versão web em breve</h2>
-      <p>Estamos preparando o TimeRank para o navegador. Enquanto isso, baixe o app para Android.</p>
-      <div class="links">
-        <a href="/timerank/politica-de-privacidade/">Política de Privacidade</a>
-        <a href="/timerank/termo-de-uso/">Termos de Uso</a>
-        <a href="/">DPelluso</a>
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    <p>© 2026 TimeRank. Todos os direitos reservados.</p>
-  </footer>
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
