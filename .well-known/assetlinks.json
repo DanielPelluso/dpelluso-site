@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.danielpelluso.timerank",
+      "sha256_cert_fingerprints": [
+        "F4:3C:3E:12:7D:54:8A:3A:96:B5:B4:55:37:29:FF:FA:92:B8:4B:95:C4:ED:F7:C9:70:D0:16:D6:43:09:D3:F8"
+      ]
+    }
+  }
+]
