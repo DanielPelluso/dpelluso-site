@@ -3,9 +3,9 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "io.github.danielpelluso.timerank",
+      "package_name": "br.com.dpelluso.timerank",
       "sha256_cert_fingerprints": [
-        "F4:3C:3E:12:7D:54:8A:3A:96:B5:B4:55:37:29:FF:FA:92:B8:4B:95:C4:ED:F7:C9:70:D0:16:D6:43:09:D3:F8"
+        "00:68:D9:F2:26:5C:D5:B5:0C:39:58:B0:A5:B7:36:97:11:78:F1:AB:D6:C9:DC:9A:C8:83:71:5D:EF:52:5A:29"
       ]
     }
   }
