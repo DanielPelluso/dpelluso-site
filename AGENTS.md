@@ -6,12 +6,13 @@ Memória técnica permanente do site **dpelluso.com.br**. Leia este arquivo ante
 
 ## 1. Objetivo
 
-Site institucional da **DPelluso** (página raiz), com seções dos apps **Controle Pro** e **TimeRank**, hospedagem das **políticas LGPD** (4 URLs oficiais) e **download do setup** do Controle Pro. Futuras versões web dos apps (Flutter web) vão para `/timerank` e `/controlepro`.
+Site institucional da **DPelluso** (página raiz), com seções dos apps **Controle Pro** e **TimeRank**, hospedagem das **políticas LGPD** (5 URLs oficiais — inclui a genérica do site) e **download do setup** do Controle Pro. Futuras versões web dos apps (Flutter web) vão para `/timerank` e `/controlepro`.
 
 **URLs oficiais (usar sempre estas — sem `.html`, com barra no final servida pelo Pages):**
 
 | Página | URL |
 |---|---|
+| Política genérica (site/AdSense) | `https://dpelluso.com.br/politica-de-privacidade` |
 | Política TimeRank | `https://dpelluso.com.br/timerank/politica-de-privacidade` |
 | Termos TimeRank | `https://dpelluso.com.br/timerank/termo-de-uso` |
 | Política Controle Pro | `https://dpelluso.com.br/controlepro/politica-de-privacidade` |
@@ -57,3 +58,4 @@ npx wrangler pages project list
 
 - **2026-11-02:**-site nasce em Cloudflare Pages (não Google Sites — este não hospeda Flutter web em subpaths). Repo novo `dpelluso-site`. Políticas migradas do `politicas-apps` (GitHub Pages); termo de uso do TimeRank **criado** (não existia). Setup (18,7 MB) hospedado no próprio Pages (limite 25 MiB). `github.io` mantido vivo até atualizar AdMob/Play.
 - **2026-11-03:** rename FutRank → TimeRank no site inteiro (textos, e-mails `timerank@`, pasta `futrank/` → `timerank/`) + 301 `/futrank/*` → `/timerank/*` em `_redirects` (commit `8c46b83`, deployado e validado: 3 URLs novas 200, 3 antigas 301).
+- **2026-11-13:** **AdSense/verificação do domínio (decisão 141 — site):** `ads.txt` criado na raiz (`google.com, pub-2846999130163437, DIRECT, f08c47fec0942fa0` — opção 2 do painel AdSense, cobre o domínio todo) + página genérica **`/politica-de-privacidade/`** (sem citar apps; foco AdSense/cookies; e-mail `suportepelluso@gmail.com`) linkada no rodapé da home. Snippet AdSense (opção 1) já existia só em `/timerank/`. `/controlepro/` continua sem snippet — quando quiser anúncios lá, adicionar snippet + unidade nesse repo.
