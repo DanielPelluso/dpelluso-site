@@ -1,0 +1,7 @@
+
+# TimeRank (item 7 — PLANO RODADA 19/11/2026): revalidacao
+# sempre sob /timerank/ — o WebUpdateGate depende de o
+# reload do botao pegar o build novo.
+/timerank/*
+  ! Cache-Control
+  Cache-Control: max-age=0, must-revalidate
