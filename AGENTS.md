@@ -30,7 +30,8 @@ Site institucional da **DPelluso** (página raiz), com seções dos apps **Contr
 
 ## 3. Pendências
 
-- [ ] **Deploy Fase S (26/11/2026):** commit em `main` + `wrangler pages deploy` das páginas novas (home, `/controlepro/`, `/apps/timerank/`, `/contato/`, `robots.txt`, `sitemap.xml`). **Só depois:** usuário desliga **Auto Ads** no console e solicita **revisão manual** no AdSense (unidades manuais já no ar).
+- [x] ~~**Deploy Fase S (26/11/2026):** commit em `main` + `wrangler pages deploy` das páginas novas (home, `/controlepro/`, `/apps/timerank/`, `/contato/`, `robots.txt`, `sitemap.xml`).~~ **FEITO (26/11/2026):** commit `8aabae0` + deploy — 11 URLs validadas em 200 (raiz, 4 seções novas, robots, sitemap, 4 políticas).
+- [ ] **Usuário (só após o deploy — já publicado):** desligar **Auto Ads** no console do AdSense e solicitar **revisão manual** (unidades manuais já no ar em home, `/controlepro/`, `/apps/timerank/` e `/contato/`).
 - [ ] **AdMob:** usuário precisa atualizar a URL da política de privacidade dos 2 apps (Controle Pro e TimeRank) para as URLs novas acima. Até lá, `github.io/politicas-apps` continua no ar **de propósito** — **não remover/redirecionar** o repo `politicas-apps` sem combinar.
 - [ ] **Play Store:** idem, campo de política de privacidade nos listings.
 - [ ] **Flutter web** em `/timerank` e `/controlepro` (próxima fase; build com `base href` da seção).
