@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+# Shell do app Flutter web (SPA) — não indexar; as políticas estáticas
+# sob /timerank/ continuam permitidas (regra mais específica vence).
+Disallow: /timerank/
+Allow: /timerank/politica-de-privacidade/
+Allow: /timerank/termo-de-uso/
+
+Sitemap: https://dpelluso.com.br/sitemap.xml
